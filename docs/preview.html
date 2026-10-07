@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AED 2,000 → 150M? Verified verdicts + interactive classroom</title>
+<meta name="description" content="Can 2,000 dirhams become 150M? Executable verification, calculators, and a 10-question quiz from scratch to pro.">
+<style>
+:root{--bg:#0b1220;--card:#111c33;--ink:#eaf0ff;--mut:#9fb0d0;--acc:#5eead4;--acc2:#fbbf24;--bad:#f87171;--ok:#34d399;--line:#22345c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#0b1220,#0e1730 40%,#0b1220);color:var(--ink)}
+a{color:var(--acc)}header{max-width:1080px;margin:0 auto;padding:48px 20px 10px}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin:3px;font-size:12px;color:var(--mut)}
+h1{font-size:clamp(28px,5vw,52px);line-height:1.05;margin:14px 0}h2{font-size:26px;margin:34px 0 12px}h3{margin:18px 0 8px}
+.sub{color:var(--mut);font-size:17px;max-width:820px}
+.grid{max-width:1080px;margin:0 auto;padding:10px 20px 60px;display:grid;gap:16px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:18px;padding:20px}
+.ceo ol{margin:8px 0 0 18px}.ceo li{margin:6px 0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}.kpi b{font-size:22px;display:block}.kpi span{color:var(--mut);font-size:12px}
+.bar{margin:10px 0}.bar .t{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}
+.track{height:12px;background:#0a1122;border:1px solid var(--line);border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--acc),#60a5fa)}
+canvas{width:100%;height:220px;background:#0a1122;border:1px solid var(--line);border-radius:14px}
+.calc label{display:block;font-size:13px;color:var(--mut);margin:10px 0 4px}
+input[type=range]{width:100%}input[type=number],select{background:#0a1122;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px;width:100%}
+.btn{background:var(--acc);color:#06251f;border:0;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.quiz-q{border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.quiz-q button{display:block;width:100%;text-align:left;margin:6px 0;background:#0a1122;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:9px;cursor:pointer}
+.quiz-q button.c{background:rgba(52,211,153,.18);border-color:var(--ok)}
+.quiz-q button.w{background:rgba(248,113,113,.16);border-color:var(--bad)}
+.exp{display:none;color:var(--mut);font-size:14px;margin-top:8px}.exp.show{display:block}
+.step{background:#0a1122;border:1px dashed var(--line);border-radius:12px;padding:10px;margin:8px 0;font-size:14px}
+footer{color:var(--mut);font-size:13px;padding:20px;text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:800px){.two{grid-template-columns:1fr}}
+code{background:#0a1122;border:1px solid var(--line);border-radius:8px;padding:2px 6px}
+</style>
+</head>
+<body>
+<header>
+<div><span class="badge">✔ verified • 6 tests passing</span><span class="badge">🐍 python 3.11</span><span class="badge">🐳 docker ready</span><span class="badge">📄 MIT</span><span class="badge">🌐 Pages-ready: /docs</span></div>
+<h1>Can AED 2,000 become AED 150M?<br>We ran the math so you don't have to guess.</h1>
+<p class="sub">A Gulf success story says: start from home with 2,000, reach 150M (30–35M real + brand), 11 branches, 100+ staff. This page is the <b>executable classroom</b> for that claim — verdicts computed by code, calculators you can move, and a quiz that takes you from scratch to pro. <b>Let's work this out in a step-by-step way to be sure we have the right answer.</b></p>
+<div class="kpis">
+<div class="kpi"><b>0.348</b><span>2,000 ÷ cheapest compliant route 5,750</span></div>
+<div class="kpi"><b>232.67%</b><span>needed yearly to reach 30M in 8y</span></div>
+<div class="kpi"><b>12.25×</b><span>faster than the market (19%)</span></div>
+<div class="kpi"><b>55.3y</b><span>at market rate 2k → 30M</span></div>
+<div class="kpi"><b>95.8</b><span>sales just to cover the licence</span></div>
+</div>
+</header>
+<div class="grid">
+<div class="card ceo">
+<h2>📌 CEO summary — 5 sentences</h2>
+<ol>
+<li><b>2,000 cannot legally launch</b> a product shop in 2026 — the cheapest compliant route is ~5,750; 2,000 is a test budget, not a launch.</li>
+<li><b>2,000 → 30M needs 232.67% every year for 8 years;</b> the market grows ~19% — the headline is an outlier, not a system.</li>
+<li><b>The habits do work:</b> cover costs first, resign only at 4× salary for 12 stable months, demo-video over spec-sheet, support beats a small price cut.</li>
+<li><b>Sell where checkout happens:</b> Instagram in UAE, Snapchat in Saudi, phones ~78.67%; views are vanity, revenue per 1,000 views is sanity.</li>
+<li><b>Use this page:</b> move the calculators, score 8/10 on the quiz, copy the 7/30/365-day plan — you will know more than most interview candidates.</li>
+</ol>
+<p><a class="btn" href="#quiz">Start the quiz →</a> <a class="btn ghost" href="#calc">Try the calculators</a></p>
+</div>
+
+<div class="card">
+<h2>📊 Verdicts — computed, not claimed</h2>
+<div id="bars"></div>
+<canvas id="chart" width="900" height="220"></canvas>
+<p style="color:var(--mut);font-size:13px">Bars = required yearly growth vs market. Source numbers frozen in <code>data/snapshots/market_2026.json</code>; chart drawn live from those numbers.</p>
+</div>
+
+<div class="two">
+<div class="card calc" id="calc">
+<h2>🧮 Break-even calculator</h2>
+<label>Price (AED) <span id="pV">149</span></label><input id="price" type="range" min="99" max="399" value="149">
+<label>Landed unit cost (AED) <span id="cV">89</span></label><input id="cost" type="range" min="20" max="250" value="89">
+<label>Fixed start cost (AED)</label><input id="fix" type="number" value="5750">
+<p><b id="be">95.8</b> sales to break even • 2,000 buys <b id="st">22</b> units</p>
+<div class="step">Step-by-step: margin = price − cost. Break-even = fixed ÷ margin. Units on 2,000 = floor(2000 ÷ cost). Move price up or cost down and watch break-even fall — that is pricing power.</div>
+</div>
+<div class="card calc">
+<h2>📈 Compounding calculator</h2>
+<label>Start (AED)</label><input id="s" type="number" value="2000">
+<label>Target (AED)</label><input id="t" type="number" value="30000000">
+<label>Years</label><input id="y" type="number" value="8">
+<p>Needed: <b id="req">232.67%</b>/yr • At 19% market: <b id="aty">55.3y</b></p>
+<div class="step">Step-by-step: rate = (target/start)^(1/years) − 1. Years-at-market = ln(target/start) ÷ ln(1.19). Change target to 150M and see 306.8% — that gap is the brand/intangible story.</div>
+</div>
+</div>
+
+<div class="card">
+<h2>🌱 Beginner guide — from scratch to pro in 15 minutes</h2>
+<div class="step"><b>0. The one idea:</b> capital (how much to start) × growth (how fast) × break-even (how many sales). All else is commentary.</div>
+<div class="step"><b>1. Start cost:</b> 2,000 ÷ 5,750 = 0.348. Test with 2,000 (friends try it, 3 videos, 200–300 ads). Launch with 8–40k, compliant.</div>
+<div class="step"><b>2. Growth:</b> (30,000,000 ÷ 2,000)^(1/8) − 1 = 232.67%. Market ~19%. 12.25× faster. 55.3 years at market. Extraordinary.</div>
+<div class="step"><b>3. Quit rule:</b> net = 4 × salary for 12 worst-months in a row. 20k salary → 80k net = 20 you + 20 growth + 20 run + 20 buffer.</div>
+<div class="step"><b>4. Profit:</b> not in 7 days. Runway 18–24 months. 80–90% fail year one. Cover costs → break-even → profit.</div>
+<div class="step"><b>5. Product + channel:</b> time-saver + 10-second demo + margin ~60 after fees. Instagram checkout (UAE), Snapchat (Saudi). Phones ~78.67%.</div>
+</div>
+
+<div class="card" id="quiz">
+<h2>🎯 Interactive quiz — scratch to pro (10 questions)</h2>
+<p style="color:var(--mut)">Pick an answer. You get the step-by-step why immediately. Score ≥ 8/10 = pro.</p>
+<div id="qbox"></div>
+<p><b>Score: <span id="score">0</span>/10</b> <button class="btn ghost" onclick="resetQuiz()">Reset</button></p>
+</div>
+
+<div class="card">
+<h2>🧪 Experiments EXP01–EXP07 (one-line each)</h2>
+<ul>
+<li><b>EXP01 licence:</b> 0.348 — test budget only.</li>
+<li><b>EXP02 compounding:</b> 232.67% to 30M / 306.8% to 150M; 12.25× market; 55.3y at market.</li>
+<li><b>EXP03 4× rule:</b> 25/25/25/25 + worst-month gate.</li>
+<li><b>EXP04 profit:</b> 18–24mo; 80–90% fail — reject 7-day promises.</li>
+<li><b>EXP05 category:</b> fashion biggest, food fastest — gadgets win only conditionally.</li>
+<li><b>EXP06 channel:</b> revenue/1k views per placement, never raw views.</li>
+<li><b>EXP07 units:</b> 22 units on 2,000; 95.8 sales to cover licence.</li>
+</ul>
+<code>python -m src.run_all && pytest -q</code>
+</div>
+
+<div class="card">
+<h2>🚀 Your 7 / 30 / 365-day plan</h2>
+<h3>Days 0–7 (honest test, ≤2,000)</h3><p>1 product, ≤90 landed, 129–169 price. Friends test. 3 videos (hook &lt;3s, proof, CTA). 200–300 split. Kill after 3 creatives × 2 prices with zero carts.</p>
+<h3>Days 8–30 (compliant launch)</h3><p>Cheapest legal route + marketplace traffic + own-store brand. Local payments. Tracked returns as trust-spend.</p>
+<h3>Months 2–12 (scale)</h3><p>Worst-month 4× gate. Monthly kill review. Offline only where online density pays rent. Organic-first + selective paid.</p>
+</div>
+
+<div class="card">
+<h2>❓ FAQ in plain words</h2>
+<p><b>Can I start with 2,000?</b> Test yes, launch no. See calculator.</p>
+<p><b>Is 150M fake?</b> Treat as claimed. 77–80% is brand value — diligence net profit, not headline.</p>
+<p><b>What do I copy?</b> Habits, not the multiple: cost-cover, 4×, demo-video, support moat, channel split.</p>
+<p><b>Online or stores?</b> Online first; stores where orders already cluster.</p>
+</div>
+
+<div class="card">
+<h2>🌐 Put this online (GitHub Pages, 2026)</h2>
+<ol>
+<li>Push this repo to GitHub.</li>
+<li><b>Settings → Pages → Source: Deploy from a branch → Branch: <code>main</code> → Folder: <code>/docs</code> → Save.</b></li>
+<li>Open <code>https://&lt;you&gt;.github.io/&lt;repo&gt;/preview.html</code>. Every push redeploys in ~1 min.</li>
+<li>Optional: add custom domain via Settings → Pages → Custom domain (creates <code>CNAME</code>).</li>
+</ol>
+</div>
+</div>
+<footer>Executable study • numbers from dated public snapshots + live re-check • run <code>python -m src.run_all</code> to reproduce • MIT</footer>
+<script>
+const DATA={req:232.67,mkt:19,req150:306.8,be:95.8,units:22,phone:78.67};
+const bars=[["Needed to 30M",232.67],["Needed to 150M",306.8],["Market",19],["GDP trend",4.6]];
+const box=document.getElementById('bars');
+bars.forEach(([t,v])=>{const d=document.createElement('div');d.className='bar';d.innerHTML=`<div class="t"><span>${t}</span><span>${v}%/yr</span></div><div class="track"><div class="fill" style="width:${Math.min(100,v/3.2)}%"></div></div>`;box.appendChild(d);});
+const c=document.getElementById('chart'),x=c.getContext('2d');x.clearRect(0,0,900,220);x.fillStyle='#9fb0d0';x.font='12px sans-serif';
+bars.forEach((b,i)=>{const h=Math.max(8,b[1]/3.2*1.8);x.fillStyle=i<2?'#5eead4':'#60a5fa';x.fillRect(40+i*210,200-h,120,h);x.fillStyle='#9fb0d0';x.fillText(b[0],40+i*210,214);x.fillText(b[1]+'%',40+i*210,195-h);});
+function calcBE(){const p=+document.getElementById('price').value,co=+document.getElementById('cost').value,f=+document.getElementById('fix').value;document.getElementById('pV').textContent=p;document.getElementById('cV').textContent=co;const m=p-co;document.getElementById('be').textContent=m>0?(f/m).toFixed(1):'∞';document.getElementById('st').textContent=Math.floor(2000/co);}
+function calcC(){const s=+document.getElementById('s').value,t=+document.getElementById('t').value,y=+document.getElementById('y').value;const r=(Math.pow(t/s,1/y)-1)*100;document.getElementById('req').textContent=r.toFixed(2)+'%';document.getElementById('aty').textContent=(Math.log(t/s)/Math.log(1.19)).toFixed(1)+'y';}
+['price','cost','fix'].forEach(id=>document.getElementById(id).addEventListener('input',calcBE));['s','t','y'].forEach(id=>document.getElementById(id).addEventListener('input',calcC));calcBE();calcC();
+const QS=[
+["AED 2,000 vs cheapest compliant route (~5,750)?",["Enough to launch","About one-third — test only","More than enough","Irrelevant"],1,"Step-by-step: 2000 ÷ 5750 = 0.348. Test with 2,000; launch compliant with more."],
+["2,000 → 30M in 8 years needs…?",["~19%/yr","~50%/yr","~232.67%/yr","~500%/yr"],2,"Step-by-step: (30,000,000/2,000)^(1/8)−1 = 232.67%. Market ~19%. Ratio 12.25×."],
+["At 19% market, 2,000 → 30M takes…?",["8 years","~20 years","~55.3 years","~100 years"],2,"Step-by-step: ln(15000)/ln(1.19) = 55.3 years. Low base + shocks explain the gap."],
+["4× resign rule means…?",["Quit at first good month","Net = 4× salary, 12 stable months, 25/25/25/25","Never quit","Borrow 4× salary"],1,"Step-by-step: 80k net on 20k salary = 20 you + 20 growth + 20 run + 20 buffer. Use worst month."],
+["Right profit order?",["Profit → costs → sales","Cover costs → break-even → profit","Ads → profit → costs","Profit in 7 days"],1,"Step-by-step: runway 18–24mo, 80–90% fail year one. Cover costs first."],
+["2,000 at landed 89 buys…?",["~200 units","~22 units","~2,000 units","Unlimited"],1,"Step-by-step: floor(2000/89) = 22. Break-even on 5,750 fixed at margin 60 = 95.8 sales."],
+["Fashion vs food vs gadgets?",["Gadgets biggest market-wide","Fashion largest share; food fastest; gadgets conditional","Food smallest","All equal"],1,"Step-by-step: fashion ~21.59% share, food ~13.16% fastest. Gadgets win only with demo + price + warranty."],
+["Views vs cash?",["Views = cash","Revenue per 1,000 views per placement","Most views always wins","Ignore data"],1,"Step-by-step: millions of views can mean zero checkout. Track revenue/1k views; kill view-rich/cash-poor."],
+["Phones share of orders?",["~20%","~50%","~78.67%","~100%"],2,"Step-by-step: ~78.67% — design mobile-first, short video, fast checkout."],
+["Intangible at 150M/30M?",["0%","~20%","80%","150%"],2,"Step-by-step: (150−30)/150 = 80%. Diligence net + branch P&L, not headline."],
+];
+let sc=0,ans={};
+const qb=document.getElementById('qbox');
+QS.forEach((q,i)=>{const d=document.createElement('div');d.className='quiz-q';d.innerHTML=`<b>Q${i+1}. ${q[0]}</b>`;q[1].forEach((o,j)=>{const b=document.createElement('button');b.textContent=o;b.onclick=()=>{if(ans[i]!==undefined)return;ans[i]=j;if(j===q[2]){b.classList.add('c');sc++;}else{b.classList.add('w');d.querySelectorAll('button')[q[2]].classList.add('c');}document.getElementById('score').textContent=sc;const e=document.createElement('div');e.className='exp show';e.textContent=q[3];d.appendChild(e);};d.appendChild(b);});qb.appendChild(d);});
+function resetQuiz(){sc=0;ans={};document.getElementById('score').textContent=0;qb.innerHTML='';location.reload();}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+services:
+  verify:
+    build: .
+    container_name: aed2000-verify
+    volumes:
+      - ./data:/app/data
+      - ./benchmarks:/app/benchmarks
+    command: python -m src.run_all
+  test:
+    build: .
+    container_name: aed2000-test
+    volumes:
+      - ./:/app
+    command: pytest -q
+  docs:
+    image: python:3.11-slim
+    container_name: aed2000-docs
+    working_dir: /app
+    volumes:
+      - ./docs:/app/docs
+    command: python -m http.server 8000 --directory docs
+    ports:
+      - "8000:8000"

@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>60-second demo — AED 2,000 → 150M verification</title>
+<style>body{margin:0;background:#0b1220;color:#eaf0ff;font-family:Inter,system-ui,Arial}main{max-width:760px;margin:0 auto;padding:40px 20px}#term{background:#050a16;border:1px solid #22345c;border-radius:16px;padding:18px;min-height:300px;font-family:monospace;white-space:pre-wrap}.btn{background:#5eead4;border:0;border-radius:12px;padding:10px 18px;font-weight:800;cursor:pointer;margin:6px}</style>
+</head><body><main>
+<h1>▶ 60-second self-playing demo</h1>
+<p>Press Play. It types the verification commands for you. Same commands work in your terminal and in Docker.</p>
+<button class="btn" id="play">▶ Play demo</button> <a class="btn" style="text-decoration:none" href="preview.html">Open interactive site</a>
+<div id="term">$ ready — press Play
+</div>
+<script>
+const lines=["$ pip install -r requirements.txt","✓ installed","$ python -m src.run_all","EXP01-license-floor: REFUTED-AS-STATED-2026 (0.348)","EXP02-growth-math: EXTRAORDINARY-OUTLIER (232.67% vs 19%, 12.25x, 55.3y)","EXP03-4x-resign-rule: SUPPORTED (25/25/25/25)","EXP04-7day-profit: REJECT 7-day (18-24mo, 80-90% fail)","EXP05-category: SELLER-SPECIFIC (fashion 21.59%, food 13.16%)","EXP06-channel: SUPPORTED (phones 78.67%)","EXP07-units: 22 units on 2,000; 95.8 to cover licence","$ pytest -q","6 passed in 0.15s — ALL VERIFIED","$ open docs/preview.html → quiz 8/10 = pro"];
+document.getElementById('play').onclick=()=>{const t=document.getElementById('term');t.textContent='';let i=0;const iv=setInterval(()=>{t.textContent+=lines[i]+'\n';i++;if(i>=lines.length)clearInterval(iv);},450);};
+</script></main></body></html>

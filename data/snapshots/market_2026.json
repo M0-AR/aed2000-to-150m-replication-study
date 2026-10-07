@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "dataset": "market_2026_verified_snapshots",
+    "collected_utc": "2026-10-07",
+    "method": "sequential single-query web searches (websearch, duckduckgo, openresearch, paper-search, agent-reach, kaggle, wiki, gsd, superpowers, gitmcp) + World Bank API live pull; one-at-a-time to avoid 429",
+    "note": "All figures are public snapshots with source+date. Do not edit by hand: re-run src/fetch_live.py to refresh. AED peg 3.6725 AED/USD (UAE Central Bank, invariant since 1997)."
+  },
+  "uae_ecommerce": {
+    "2025_AED_bn": 42.2,
+    "2025_USD_bn": 11.5,
+    "2020_AED_bn": 17.6,
+    "2020_USD_bn": 4.8,
+    "cagr_2020_2025_pct": 19.0,
+    "forecast_cagr_2026_2030_pct": 9.9,
+    "2030_forecast_AED_bn": 67.2,
+    "2030_forecast_USD_bn": 18.3,
+    "source": "EZDubai Logistics Hub x Euromonitor International 6th ed. via WAM Emirates News Agency 2026-09-28",
+    "url": "https://www.wam.ae/en/article/c2h35yn-uae-e-commerce-market-size-reaches-aed422-billion"
+  },
+  "uae_ecommerce_alt_sizing": {
+    "2026_USD_bn": 12.3,
+    "2031_USD_bn": 21.01,
+    "cagr_2026_2031_pct": 11.29,
+    "smartphone_share_2025_pct": 78.67,
+    "wallets_share_2025_pct": 43.92,
+    "fashion_share_2025_pct": 21.59,
+    "food_cagr_pct": 13.16,
+    "b2c_share_pct": 67.89,
+    "source": "Mordor Intelligence UAE E-commerce report, forecast period 2026-2031, accessed 2026-10-07",
+    "url": "https://www.mordorintelligence.com/industry-reports/united-arab-emirates-ecommerce-market"
+  },
+  "saudi_ecommerce": {
+    "2026_USD_bn": 31.29,
+    "2031_USD_bn": 54.87,
+    "source": "Saudi Seller Hub 2026 Guide (citing market estimates)",
+    "url": "https://saudisellerhub.com/start-ecommerce-business-saudi-arabia/"
+  },
+  "license_floor_aed_2026": {
+    "etader_dubai_per_year": 1070,
+    "etader_note": "UAE/GCC nationals or services-only for expats; physical-product expat sellers need commercial e-commerce licence",
+    "rakez_freezone_from": 5750,
+    "ifza_freezone_range": [11900, 15000],
+    "mainland_range": [12000, 35000],
+    "lean_year1_allin_range": [60000, 120000],
+    "unlicensed_fine_up_to": 1000000,
+    "vat_threshold": 375000,
+    "sources": [
+      "StoreStarter UAE 2026-03-28",
+      "abcapital.ae 2026-02-04",
+      "dubaipractical.com 2026-05-08",
+      "digiflow.ae 2026-09-18"
+    ]
+  },
+  "startup_base_rates": {
+    "dropshipping_success_y1_pct": [10, 20],
+    "dropshipping_fail_y1_pct": [80, 90],
+    "dropshipping_fail_4mo_pct": 90,
+    "source": "Spocket via AffMaven Dropshipping Statistics 2026; corroborated by EasyAppSEcom, DropshippingBook 2026",
+    "shopify_runway_months": [18, 24],
+    "shopify_y1_cost_split_pct": {"product": 31.6, "team": 18.8, "operating": 11.0, "marketing": 10.3, "offline": 10.5, "online": 9.0, "shipping": 8.7},
+    "source2": "Shopify ae/blog/ecommerce-business-blueprint 2026-06-11; Nov 2025 merchant survey"
+  },
+  "uae_gdp_worldbank_USD": {
+    "2017": 403365056078.846,
+    "2018": 440560003161.236,
+    "2019": 433926218686.108,
+    "2020": 357161776271.328,
+    "2021": 422441282436.237,
+    "2022": 511403404642.173,
+    "2023": 522622268401.125,
+    "2024": 552324919095.872,
+    "source": "World Bank WDI NY.GDP.MKTP.CD via openresearch get_country_indicator, pulled 2026-10-07",
+    "covid_dip_2019_2020_pct": -17.69
+  },
+  "podcast_claims_under_test": {
+    "C1_start_capital_AED": 2000,
+    "C2_market_value_AED_M": 150,
+    "C2_real_value_AED_M": [30, 35],
+    "C2_branches": 11,
+    "C2_employees_gt": 100,
+    "C2_start_year": 2017,
+    "C3_resign_rule_net_profit_multiple_of_salary": 4,
+    "C4_seven_day_profit": "rejected by claimant; tested as FALSE-expectation",
+    "C5_gap_vs_copypaste_plus_innovation": "copy-paste allowed iff value-add (services/support)",
+    "C6_emotion_beats_specs": true,
+    "C6_brand_loyalty_beats_national": true,
+    "C7_high_prob_categories": ["home products", "robots", "cameras"],
+    "C7_claimed_success_prob_pct": 80,
+    "C8_uae_best": ["Instagram", "TikTok"],
+    "C8_ksa_best": ["Snapchat"],
+    "C9_offline_share_pct": 50,
+    "C10_organic_over_paid": true,
+    "C11_ai_uses": ["inventory forecasting", "voice commerce", "personalization"],
+    "C12_covid_masks_at_cost": true
+  }
+}
