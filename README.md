@@ -7,7 +7,12 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Pages](https://img.shields.io/badge/GitHub_Pages-live_preview-orange)
 
-> **Live interactive site:** open [`docs/preview.html`](docs/preview.html) — or after pushing to GitHub, enable **Settings → Pages → Deploy from a branch → `main` / `/docs`** and share `https://<you>.github.io/<repo>/preview.html`.
+> **Live interactive site — click one (all three work):**
+> - 🌐 [`https://m0-ar.github.io/aed2000-to-150m-replication-study/`](https://m0-ar.github.io/aed2000-to-150m-replication-study/) — homepage (works when Pages source is `/docs` **or** `/`)
+> - 🌐 [`https://m0-ar.github.io/aed2000-to-150m-replication-study/preview.html`](https://m0-ar.github.io/aed2000-to-150m-replication-study/preview.html) — direct page (works when Pages source is `/docs`)
+> - 🌐 [`https://m0-ar.github.io/aed2000-to-150m-replication-study/docs/preview.html`](https://m0-ar.github.io/aed2000-to-150m-replication-study/docs/preview.html) — mirrored path (works when Pages source is `/`)
+> - 📁 Local: open [`docs/preview.html`](docs/preview.html) in your browser.
+> - ⚙️ Setup: **Settings → Pages → Deploy from a branch → `main` → `/docs` (recommended)**. Mirrors make the other setting work too.
 
 ## CEO summary — the whole story in 30 seconds
 
@@ -26,7 +31,7 @@
 
 | Way | Link / command |
 |-----|----------------|
-| 🌐 **Interactive website** (best) | Open [`docs/preview.html`](docs/preview.html) locally or via GitHub Pages. Includes charts, calculator, and quiz. |
+| 🌐 **Interactive website** (best) | Local [`docs/preview.html`](docs/preview.html) · Live [`/` matches source `/docs` or `/`](https://m0-ar.github.io/aed2000-to-150m-replication-study/) · [`/preview.html`](https://m0-ar.github.io/aed2000-to-150m-replication-study/preview.html) · [`/docs/preview.html`](https://m0-ar.github.io/aed2000-to-150m-replication-study/docs/preview.html). Charts, calculators, quiz. |
 | 🖼️ **Screenshots** | [`docs/assets/preview-top.png`](docs/assets/preview-top.png) · [`docs/assets/preview-quiz.png`](docs/assets/preview-quiz.png) — auto-captured with a real browser (see § Reproducibility). |
 | 🎬 **Video demo** | Play [`docs/assets/demo.html`](docs/assets/demo.html) — a self-playing walkthrough (works on GitHub Pages; GitHub READMEs show videos via a clickable thumbnail, see below). Press play, it types the commands for you. |
 | ⚡ **Terminal** | `python -m src.run_all` prints 7 verdicts in ~1 second. |
@@ -271,10 +276,14 @@ docker compose up docs   # http://localhost:8000 → docs/preview.html
 ```
 
 **Publish as a website (2026 flow):**
-1. Push this folder to GitHub (root must contain `README.md`, `LICENSE`, `docs/preview.html`, `docs/.nojekyll`).
-2. On GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` → Folder: `/docs` → Save.**
-3. Wait ~1 min → open `https://<you>.github.io/<repo>/preview.html`. Every push to `main` redeploys.
-4. Optional: add `.github/workflows/pages.yml` (included) for Actions-based deploy + custom domain via `CNAME`.
+1. Push (root has `README.md`, `LICENSE`, `preview.html`, `index.html`, `.nojekyll`; `docs/` has `preview.html`, `index.html`, `.nojekyll`).
+2. On GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` → Folder: `/docs` (recommended) → Save.** Mirrors make `/` work too.
+3. Wait 1–2 min for the Actions “pages build and deployment” run, then click:
+   - [`/`](https://m0-ar.github.io/aed2000-to-150m-replication-study/) ·
+   - [`/preview.html`](https://m0-ar.github.io/aed2000-to-150m-replication-study/preview.html) ·
+   - [`/docs/preview.html`](https://m0-ar.github.io/aed2000-to-150m-replication-study/docs/preview.html)
+4. Diagnose with three probes (no login): `for p in "" "preview.html" "docs/preview.html"; do curl -s -o /dev/null -w "%{http_code}\n" "https://m0-ar.github.io/aed2000-to-150m-replication-study/$p"; done` — want `200 200 200` (mirrors on). `200 200 404` = source `/docs` only; `200 404 200` = source `/` only; any `404 404 404` = Pages off / still building.
+5. Optional: `.github/workflows/pages.yml` (included) for Actions deploy + custom domain via `CNAME`. Entry file must sit at the top of the chosen source; asset links stay relative.
 
 Structure: `src/` · `experiments/` · `benchmarks/` · `data/snapshots/` · `paper/` · `docs/` (site + assets) · `Dockerfile` + `docker-compose.yml`.
 
